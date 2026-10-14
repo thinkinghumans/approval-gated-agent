@@ -1,0 +1,37 @@
+{
+  "version": "2026.03-1",
+  "signedBy": "human:sam.whitfield@acme-fab.example.com",
+  "signedAt": "2026-03-01T17:00:00Z",
+  "confidenceFloor": 0.8,
+  "verbs": {
+    "PLACE_HOLD":           { "enabled": true, "autonomousUpToUsd": 0 },
+    "RELEASE_HOLD":         { "enabled": true, "autonomousUpToUsd": null },
+    "DRAFT_SUPPLIER_EMAIL": { "enabled": true, "autonomousUpToUsd": 0 },
+    "REQUEST_CREDIT_MEMO":  { "enabled": true, "autonomousUpToUsd": 250 },
+    "MARK_DUPLICATE":       { "enabled": true, "autonomousUpToUsd": null },
+    "REQUEST_RETRO_PO":     { "enabled": true, "autonomousUpToUsd": null },
+    "CREATE_TASK":          { "enabled": true, "autonomousUpToUsd": 0 },
+    "ESCALATE":             { "enabled": true, "autonomousUpToUsd": 0 }
+  },
+  "approvalMatrix": {
+    "bands": [
+      { "upToUsd": 5000, "roles": ["ap_lead", "controller", "cfo"] },
+      { "upToUsd": 50000, "roles": ["controller", "cfo"] },
+      { "upToUsd": null, "roles": ["cfo"] }
+    ],
+    "minimumRolesByException": {
+      "MISSING_PO": ["controller", "cfo"]
+    }
+  },
+  "directory": {
+    "human:dana.ortiz@acme-fab.example.com":   { "name": "Dana Ortiz", "role": "ap_lead" },
+    "human:sam.whitfield@acme-fab.example.com": { "name": "Sam Whitfield", "role": "controller" },
+    "human:priya.raman@acme-fab.example.com":  { "name": "Priya Raman", "role": "cfo" },
+    "human:leo.brandt@acme-fab.example.com":   { "name": "Leo Brandt", "role": "buyer" },
+    "human:mae.okafor@acme-fab.example.com":   { "name": "Mae Okafor", "role": "receiving" }
+  },
+  "screening": {
+    "priceTolerancePct": 1,
+    "qtyTolerancePct": 0
+  }
+}

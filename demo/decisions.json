@@ -1,0 +1,38 @@
+[
+  {
+    "invoiceId": "INV-1007",
+    "verb": "MARK_DUPLICATE",
+    "by": "agent:invoice-exception",
+    "decision": "approve",
+    "note": "The agent tries to approve its own proposal."
+  },
+  {
+    "invoiceId": "INV-1007",
+    "verb": "MARK_DUPLICATE",
+    "by": "human:dana.ortiz@acme-fab.example.com",
+    "decision": "approve",
+    "note": "The AP lead tries to approve a $58,300 action; the matrix requires the CFO."
+  },
+  {
+    "invoiceId": "INV-1007",
+    "verb": "MARK_DUPLICATE",
+    "by": "human:priya.raman@acme-fab.example.com",
+    "decision": "approve",
+    "note": "The CFO approves."
+  },
+  {
+    "invoiceId": "INV-1003",
+    "verb": "REQUEST_CREDIT_MEMO",
+    "by": "human:dana.ortiz@acme-fab.example.com",
+    "decision": "approve",
+    "note": "A $960 credit memo request is within the AP lead's band."
+  },
+  {
+    "invoiceId": "INV-1005",
+    "verb": "REQUEST_RETRO_PO",
+    "by": "human:sam.whitfield@acme-fab.example.com",
+    "decision": "reject",
+    "reason": "Carrier is on our annual freight agreement; AP will match this to the blanket freight PO instead of a retro PO.",
+    "note": "The controller rejects with a reason. The invoice stays on hold and the case returns to AP."
+  }
+]

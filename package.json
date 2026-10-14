@@ -1,0 +1,27 @@
+{
+  "name": "approval-gated-agent",
+  "version": "0.1.0",
+  "description": "Reference implementation of an approval-gated back-office agent: the model proposes, deterministic policy decides, a named person approves, a closed executor acts, and a hash-chained log records all of it. No payment verb.",
+  "license": "MIT",
+  "author": "Thinking Humans",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "demo": "node cli.ts demo",
+    "demo:interactive": "node cli.ts demo --interactive",
+    "verify": "node cli.ts verify",
+    "audit": "node cli.ts audit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.104.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "^5.9.3"
+  }
+}
